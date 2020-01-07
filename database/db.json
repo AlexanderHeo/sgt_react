@@ -4,19 +4,19 @@
       "id": 1,
       "name": "Kyle Simpson",
       "course": "JavaScript",
-      "grade": 100
+      "grade": 80
     },
     {
       "id": 2,
       "name": "Brendan Eich",
       "course": "JavaScript",
-      "grade": 100
+      "grade": 75
     },
     {
       "id": 3,
       "name": "Douglas Crockford",
       "course": "JavaScript",
-      "grade": 100
+      "grade": 25
     }
   ]
 }

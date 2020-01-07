@@ -33,8 +33,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Header />
-        <GradeTable grades={this.state.grades} />
+        <Header grades={ this.state.grades } />
+        <GradeTable grades={ this.state.grades } />
       </>
     );
   }

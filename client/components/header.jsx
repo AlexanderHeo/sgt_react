@@ -1,9 +1,34 @@
 import React from 'react';
 
-function Header() {
+function CalculateAverage(props) {
+  const grades = props.grades;
+  if (grades.length === 0) {
+    return '0';
+  }
+  let totalGrades = 0;
+  grades.map(individual => {
+    totalGrades += individual.grade;
+  });
+  const averageGrade = totalGrades / grades.length;
   return (
-    <h1>Student Grade Table</h1>
+    <span className="badge badge-secondary">{ averageGrade }</span>
   );
+}
+
+class Header extends React.Component {
+  render() {
+    return (
+      <div className="container" >
+        <div className="row align-items-center">
+          <h1 className="col-8">Student Grade Table</h1>
+          <h3 className="col-">Average Grade</h3>
+          <h3 className="col-">
+            <CalculateAverage grades={ this.props.grades }/>
+          </h3>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Header;
