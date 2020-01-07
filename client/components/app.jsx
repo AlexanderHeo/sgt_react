@@ -34,19 +34,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <table className="table">
-
-          <thead>
-            <tr>
-              <th scope="col">Student Name</th>
-              <th scope="col">Course</th>
-              <th scope="col">Grade</th>
-            </tr>
-          </thead>
-          <tbody>
-            <GradeTable grades={this.state.grades} />
-          </tbody>
-        </table>
+        <GradeTable grades={this.state.grades} />
       </>
     );
   }
