@@ -5,7 +5,7 @@ function Grade(props) {
     <tr>
       <td>{ props.name }</td>
       <td>{ props.course }</td>
-      <td>{props.grade}</td>
+      <td>{ props.grade }</td>
     </tr>
   );
 }
