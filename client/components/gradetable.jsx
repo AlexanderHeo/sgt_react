@@ -25,29 +25,31 @@ class GradeTable extends React.Component {
       );
     } else {
       return (
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Student Name</th>
-              <th scope="col">Course</th>
-              <th scope="col">Grade</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              grades.map(individual => {
-                return (
-                  <Grade
-                    key={individual.id}
-                    name={individual.name}
-                    course={individual.course}
-                    grade={individual.grade}
-                  />
-                );
-              })
-            }
-          </tbody>
-        </table>
+        <div className="container col-9">
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">Student Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                grades.map(individual => {
+                  return (
+                    <Grade
+                      key={individual.id}
+                      name={individual.name}
+                      course={individual.course}
+                      grade={individual.grade}
+                    />
+                  );
+                })
+              }
+            </tbody>
+          </table>
+        </div>
       );
     }
   }
