@@ -17,6 +17,24 @@
       "name": "Douglas Crockford",
       "course": "JavaScript",
       "grade": 25
+    },
+    {
+      "id": 4,
+      "name": "Scott Tolinski",
+      "course": "Web Dev",
+      "grade": 100
+    },
+    {
+      "id": 5,
+      "name": "Wes Bos",
+      "course": "Tasty Treats",
+      "grade": 100
+    },
+    {
+      "id": 6,
+      "name": "Alex Heo",
+      "course": "LEGO",
+      "grade": 100
     }
   ]
 }

@@ -22,20 +22,21 @@ class GradeForm extends React.Component {
 
   handleAdd(event) {
     event.preventDefault();
-    // const gradesArr = this.state.grades;
-    // const newId = gradesArr.length + 1;
-    // const newStudent = {
-    //   id: newId,
-    //   name: this.state.name,
-    //   course: this.state.course,
-    //   grade: this.state.grade
-    // };
-    // this.props.onSubmit(newStudent);
-    // this.setState({
-    //   name: this.state.name,
-    //   course: this.state.course,
-    //   grade: this.state.grade
-    // });
+    const grades = this.props.grades;
+    const newId = grades.length + 1;
+    const parsedIntGrade = parseInt(this.state.grade);
+    const newStudent = {
+      id: newId,
+      name: this.state.name,
+      course: this.state.course,
+      grade: parsedIntGrade
+    };
+    this.props.onSubmit(newStudent);
+    this.setState({
+      name: '',
+      course: '',
+      grade: ''
+    });
   }
 
   handleCancel() {
@@ -51,7 +52,9 @@ class GradeForm extends React.Component {
       <div className="container col-3">
         <form action="">
           <div className="form-group d-flex align-items-center">
-            <i className="fas fa-user"></i>
+            <label>
+              <i className="fas fa-user"></i>
+            </label>
             <input
               type="text"
               className="form-control"

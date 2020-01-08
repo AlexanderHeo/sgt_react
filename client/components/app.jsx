@@ -1,4 +1,5 @@
 import React from 'react';
+import GradeForm from './gradeform.jsx';
 import GradeTable from './gradetable.jsx';
 import Header from './header.jsx';
 
@@ -8,6 +9,7 @@ class App extends React.Component {
     this.state = ({
       grades: []
     });
+    this.addGrade = this.addGrade.bind(this);
   }
 
   componentDidMount() {
@@ -30,29 +32,26 @@ class App extends React.Component {
     // console.log('this.state.grades:', this.state.grades);
   }
 
-  // addGrade(newStudent) {
-  //   // compile name, course, grade into
-  //   // an object called newStudent
-  //   // fetch with post method
-  //   fetch('/api/grades', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(newStudent)
-  //   })
-  //     .then(response => {
-  //       return response.json();
-  //     })
-  //     .then(jsonData => {
-  //       // create new student object
-  //       // with name, course, grade
-  //       // add id prop to new student object
-  //       // deep copy state.grades
-  //       // add new student object to copied state.grades
-  //       // setState of grades to copied grades
-  //     });
-  // }
+  addGrade(newStudent) {
+    fetch('/api/grades', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newStudent)
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(jsonData => {
+        newStudent.id = (this.state.grades).length + 1;
+        const gradesDeepCopy = [...this.state.grades];
+        const addedNewStudent = gradesDeepCopy.concat(newStudent);
+        this.setState({
+          grades: addedNewStudent
+        });
+      });
+  }
 
   render() {
     return (
@@ -60,13 +59,10 @@ class App extends React.Component {
         <Header grades={ this.state.grades } />
         <div className="parent-container d-flex">
           <GradeTable grades={ this.state.grades } />
-          {/* <GradeForm
+          <GradeForm
             onSubmit={ this.addGrade }
             grades={ this.state.grades }
-            // name= { this.state.name }
-            // course = { this.state.course }
-            // grade = { this.state.grade }
-          /> */}
+          />
         </div>
       </>
     );

@@ -11,7 +11,7 @@ function CalculateAverage(props) {
   });
   const averageGrade = totalGrades / grades.length;
   return (
-    <span className="badge badge-secondary">{ averageGrade }</span>
+    <span className="badge badge-secondary">{ Math.round(averageGrade) }</span>
   );
 }
 
