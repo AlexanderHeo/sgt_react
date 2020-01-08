@@ -10,8 +10,8 @@ class GradeForm extends React.Component {
       grade: ''
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleAdd = this.handleAdd.bind(this);
-    this.handleCancel = this.handleCancel.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleChange(event) {
@@ -20,7 +20,7 @@ class GradeForm extends React.Component {
     });
   }
 
-  handleAdd(event) {
+  handleSubmit(event) {
     event.preventDefault();
     const grades = this.props.grades;
     const newId = grades.length + 1;
@@ -39,7 +39,7 @@ class GradeForm extends React.Component {
     });
   }
 
-  handleCancel() {
+  handleReset() {
     this.setState({
       name: '',
       course: '',
@@ -50,7 +50,7 @@ class GradeForm extends React.Component {
   render() {
     return (
       <div className="container col-3">
-        <form action="">
+        <form action="" onSubmit={ this.handleSubmit } onReset={ this.handleReset }>
           <div className="form-group d-flex align-items-center">
             <label>
               <i className="fas fa-user"></i>
@@ -86,9 +86,9 @@ class GradeForm extends React.Component {
               onChange={ this.handleChange }
             />
           </div>
+          <input type='submit' value='Add' />
+          <input type='reset' value='Cancel' />
         </form>
-        <button onClick={ this.handleAdd }>Add</button>
-        <button onClick={ this.handleCancel }>Cancel</button>
       </div>
     );
   }

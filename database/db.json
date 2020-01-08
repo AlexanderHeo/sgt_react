@@ -35,6 +35,30 @@
       "name": "Alex Heo",
       "course": "LEGO",
       "grade": 100
+    },
+    {
+      "id": 7,
+      "name": "Daft Punk",
+      "course": "One More Time",
+      "grade": 100
+    },
+    {
+      "id": 8,
+      "name": "Billy Joel",
+      "course": "For The Longest Time",
+      "grade": 100
+    },
+    {
+      "id": 9,
+      "name": "Lionel Ritchtie",
+      "course": "Is It Me You're Looking",
+      "grade": 4
+    },
+    {
+      "id": 10,
+      "name": "Billy Joel Armstrong",
+      "course": "Do You Have The Time",
+      "grade": 60
     }
   ]
 }

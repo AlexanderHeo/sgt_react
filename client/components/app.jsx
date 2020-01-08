@@ -44,9 +44,8 @@ class App extends React.Component {
         return response.json();
       })
       .then(jsonData => {
-        newStudent.id = (this.state.grades).length + 1;
-        const gradesDeepCopy = [...this.state.grades];
-        const addedNewStudent = gradesDeepCopy.concat(newStudent);
+        const gradesCopy = [...this.state.grades];
+        const addedNewStudent = gradesCopy.concat(newStudent);
         this.setState({
           grades: addedNewStudent
         });
