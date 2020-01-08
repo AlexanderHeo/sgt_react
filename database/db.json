@@ -17,6 +17,30 @@
       "name": "Douglas Crockford",
       "course": "JavaScript",
       "grade": 25
+    },
+    {
+      "name": "Daft Punk",
+      "course": "Harder",
+      "grade": 100,
+      "id": 4
+    },
+    {
+      "name": "Daft Punk",
+      "course": "Better",
+      "grade": 100,
+      "id": 5
+    },
+    {
+      "name": "Daft Punk",
+      "course": "Faster",
+      "grade": 100,
+      "id": 6
+    },
+    {
+      "name": "Daft Punk",
+      "course": "Stronger",
+      "grade": 100,
+      "id": 7
     }
   ]
 }

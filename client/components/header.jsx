@@ -11,14 +11,14 @@ function CalculateAverage(props) {
   });
   const averageGrade = totalGrades / grades.length;
   return (
-    <span className="badge badge-secondary">{ averageGrade }</span>
+    <span className="badge badge-secondary">{ Math.round(averageGrade) }</span>
   );
 }
 
 class Header extends React.Component {
   render() {
     return (
-      <div className="container" >
+      <div className="container d-block">
         <div className="row align-items-center">
           <h1 className="col-8">Student Grade Table</h1>
           <h3 className="col-">Average Grade</h3>
