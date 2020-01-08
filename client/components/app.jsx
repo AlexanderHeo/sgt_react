@@ -45,7 +45,7 @@ class App extends React.Component {
       })
       .then(jsonData => {
         const gradesCopy = [...this.state.grades];
-        const addedNewStudent = gradesCopy.concat(newStudent);
+        const addedNewStudent = gradesCopy.concat(jsonData);
         this.setState({
           grades: addedNewStudent
         });

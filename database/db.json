@@ -19,46 +19,28 @@
       "grade": 25
     },
     {
-      "id": 4,
-      "name": "Scott Tolinski",
-      "course": "Web Dev",
-      "grade": 100
-    },
-    {
-      "id": 5,
-      "name": "Wes Bos",
-      "course": "Tasty Treats",
-      "grade": 100
-    },
-    {
-      "id": 6,
-      "name": "Alex Heo",
-      "course": "LEGO",
-      "grade": 100
-    },
-    {
-      "id": 7,
       "name": "Daft Punk",
-      "course": "One More Time",
-      "grade": 100
+      "course": "Harder",
+      "grade": 100,
+      "id": 4
     },
     {
-      "id": 8,
-      "name": "Billy Joel",
-      "course": "For The Longest Time",
-      "grade": 100
+      "name": "Daft Punk",
+      "course": "Better",
+      "grade": 100,
+      "id": 5
     },
     {
-      "id": 9,
-      "name": "Lionel Ritchtie",
-      "course": "Is It Me You're Looking",
-      "grade": 4
+      "name": "Daft Punk",
+      "course": "Faster",
+      "grade": 100,
+      "id": 6
     },
     {
-      "id": 10,
-      "name": "Billy Joel Armstrong",
-      "course": "Do You Have The Time",
-      "grade": 60
+      "name": "Daft Punk",
+      "course": "Stronger",
+      "grade": 100,
+      "id": 7
     }
   ]
 }

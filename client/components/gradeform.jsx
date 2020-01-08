@@ -22,11 +22,8 @@ class GradeForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const grades = this.props.grades;
-    const newId = grades.length + 1;
     const parsedIntGrade = parseInt(this.state.grade);
     const newStudent = {
-      id: newId,
       name: this.state.name,
       course: this.state.course,
       grade: parsedIntGrade
