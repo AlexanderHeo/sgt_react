@@ -33,13 +33,13 @@
     {
       "name": "Daft Punk",
       "course": "Faster",
-      "grade": 100,
+      "grade": 90,
       "id": 6
     },
     {
       "name": "Daft Punk",
       "course": "Stronger",
-      "grade": 100,
+      "grade": 80,
       "id": 7
     }
   ]
