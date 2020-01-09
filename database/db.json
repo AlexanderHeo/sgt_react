@@ -41,6 +41,12 @@
       "course": "Stronger",
       "grade": 100,
       "id": 7
+    },
+    {
+      "name": "Alex",
+      "course": "Heo",
+      "grade": 50,
+      "id": 8
     }
   ]
 }
