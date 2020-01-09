@@ -10,6 +10,7 @@ class App extends React.Component {
       grades: []
     });
     this.addGrade = this.addGrade.bind(this);
+    this.deleteGrade = this.deleteGrade.bind(this);
   }
 
   componentDidMount() {
@@ -26,10 +27,6 @@ class App extends React.Component {
           grades: jsonData
         });
       });
-  }
-
-  componentDidUpdate() {
-    // console.log('this.state.grades:', this.state.grades);
   }
 
   addGrade(newStudent) {
@@ -52,12 +49,36 @@ class App extends React.Component {
       });
   }
 
+  deleteGrade(deleteId) {
+    fetch(`/api/grades/${deleteId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify()
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(jsonData => {
+        const gradesCopy = [...this.state.grades];
+        const index = gradesCopy.findIndex(studentObj => studentObj.id === deleteId);
+        gradesCopy.splice(index, 1);
+        this.setState({
+          grades: gradesCopy
+        });
+      });
+  }
+
   render() {
     return (
       <>
         <Header grades={ this.state.grades } />
         <div className="parent-container d-flex">
-          <GradeTable grades={ this.state.grades } />
+          <GradeTable
+            onSubmit={ this.deleteGrade }
+            grades={ this.state.grades }
+          />
           <GradeForm
             onSubmit={ this.addGrade }
             grades={ this.state.grades }

@@ -6,6 +6,14 @@ function Grade(props) {
       <td>{ props.name }</td>
       <td>{ props.course }</td>
       <td>{ props.grade }</td>
+      <td>
+        <input
+          type="button"
+          className="btn btn-danger"
+          value="Delete"
+          onClick={ () => props.delete(props.deleteId) }
+        />
+      </td>
     </tr>
   );
 }
@@ -32,6 +40,7 @@ class GradeTable extends React.Component {
                 <th scope="col">Student Name</th>
                 <th scope="col">Course</th>
                 <th scope="col">Grade</th>
+                <th scope="col">Operations</th>
               </tr>
             </thead>
             <tbody>
@@ -39,10 +48,12 @@ class GradeTable extends React.Component {
                 grades.map(individual => {
                   return (
                     <Grade
-                      key={(individual.id)}
-                      name={individual.name}
-                      course={individual.course}
-                      grade={individual.grade}
+                      key={ individual.id }
+                      name={ individual.name }
+                      course={ individual.course }
+                      grade={ individual.grade }
+                      delete={ this.props.onSubmit }
+                      deleteId={ individual.id }
                     />
                   );
                 })
