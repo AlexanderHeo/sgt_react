@@ -18,15 +18,16 @@ function CalculateAverage(props) {
 class Header extends React.Component {
   render() {
     return (
-      <div className="container d-block">
-        <div className="row align-items-center">
-          <h1 className="col-8">Student Grade Table</h1>
-          <h3 className="col-">Average Grade</h3>
-          <h3 className="col-">
-            <CalculateAverage grades={ this.props.grades }/>
+      <div className="container-fluid">
+        <div className="row">
+          <h1 className="col-7">Student Grade Table</h1>
+          <h3 className="col-3">Average Grade</h3>
+          <h3 className="col-2">
+            <CalculateAverage grades={this.props.grades} />
           </h3>
         </div>
       </div>
+
     );
   }
 }

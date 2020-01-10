@@ -33,34 +33,32 @@ class GradeTable extends React.Component {
       );
     } else {
       return (
-        <div className="container col-9">
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col">Student Name</th>
-                <th scope="col">Course</th>
-                <th scope="col">Grade</th>
-                <th scope="col">Operations</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                grades.map(individual => {
-                  return (
-                    <Grade
-                      key={ individual.id }
-                      name={ individual.name }
-                      course={ individual.course }
-                      grade={ individual.grade }
-                      delete={ this.props.onSubmit }
-                      deleteId={ individual.id }
-                    />
-                  );
-                })
-              }
-            </tbody>
-          </table>
-        </div>
+        <table className="table col-lg-9 col-sm-12">
+          <thead>
+            <tr>
+              <th scope="col">Student Name</th>
+              <th scope="col">Course</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Operations</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              grades.map(individual => {
+                return (
+                  <Grade
+                    key={ individual.id }
+                    name={ individual.name }
+                    course={ individual.course }
+                    grade={ individual.grade }
+                    delete={ this.props.onSubmit }
+                    deleteId={ individual.id }
+                  />
+                );
+              })
+            }
+          </tbody>
+        </table>
       );
     }
   }

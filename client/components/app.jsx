@@ -74,15 +74,17 @@ class App extends React.Component {
     return (
       <>
         <Header grades={ this.state.grades } />
-        <div className="parent-container d-flex">
-          <GradeTable
-            onSubmit={ this.deleteGrade }
-            grades={ this.state.grades }
-          />
-          <GradeForm
-            onSubmit={ this.addGrade }
-            grades={ this.state.grades }
-          />
+        <div className="container-fluid">
+          <div className="row">
+            <GradeTable
+              onSubmit={this.deleteGrade}
+              grades={this.state.grades}
+            />
+            <GradeForm
+              onSubmit={this.addGrade}
+              grades={this.state.grades}
+            />
+          </div>
         </div>
       </>
     );

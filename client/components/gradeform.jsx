@@ -46,48 +46,44 @@ class GradeForm extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <form className="col-lg-3" onSubmit={this.handleSubmit} onReset={this.handleReset}>
-            <div className="form-group">
-              <label>
-                <i className="fas fa-user"></i>
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Name"
-                name="name"
-                value={this.state.name}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="form-group d-flex align-items-center">
-              <i className="fas fa-book"></i>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Course"
-                name="course"
-                value={this.state.course}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="form-group d-flex align-items-center">
-              <i className="fas fa-graduation-cap"></i>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Grade"
-                name="grade"
-                value={this.state.grade}
-                onChange={this.handleChange}
-              />
-            </div>
-            <input type='submit' value='Add' />
-            <input type='reset' value='Cancel' />
-          </form>
-        </div>
+      <div className="container col-lg-3 col-sm-12">
+        <form onSubmit={this.handleSubmit} onReset={this.handleReset}>
+          <div className="form-group d-flex">
+            <i className="fas fa-user align-middle"></i>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Name"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group d-flex">
+            <i className="fas fa-book align-middle"></i>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Course"
+              name="course"
+              value={this.state.course}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group d-flex">
+            <i className="fas fa-graduation-cap align-middle"></i>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Grade"
+              name="grade"
+              value={this.state.grade}
+              onChange={this.handleChange}
+            />
+          </div>
+          <input type='submit' value='Add' />
+          <input type='reset' value='Cancel' />
+        </form>
       </div>
     );
   }
