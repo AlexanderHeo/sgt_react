@@ -1,46 +1,10 @@
 {
   "grades": [
     {
-      "id": 1,
-      "name": "Kyle Simpson",
-      "course": "JavaScript",
-      "grade": 80
-    },
-    {
-      "id": 2,
-      "name": "Brendan Eich",
-      "course": "JavaScript",
-      "grade": 75
-    },
-    {
-      "id": 3,
-      "name": "Douglas Crockford",
-      "course": "JavaScript",
-      "grade": 25
-    },
-    {
       "name": "Daft Punk",
       "course": "Harder",
       "grade": 100,
-      "id": 4
-    },
-    {
-      "name": "Daft Punk",
-      "course": "Better",
-      "grade": 100,
-      "id": 5
-    },
-    {
-      "name": "Daft Punk",
-      "course": "Faster",
-      "grade": 90,
-      "id": 6
-    },
-    {
-      "name": "Daft Punk",
-      "course": "Stronger",
-      "grade": 80,
-      "id": 7
+      "id": 1
     }
   ]
 }
